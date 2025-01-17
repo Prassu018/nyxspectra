@@ -2,7 +2,9 @@
 // import productImage from "@/assets/product-image.png";
 // import pyramidImage from "@/assets/pyramid.png";
 // import tubeImage from "@/assets/tube.png";
+// // import nyx from "@/assets/nyx.mp4";
 // import Image from "next/image";
+
 // import { motion, useScroll, useTransform } from "framer-motion";
 // import { useRef } from "react";
 
@@ -23,17 +25,25 @@
 //             {/* <div className="tag">More </div> */}
 //           </div>
 
-//           <h2 className="text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
+//           {/* <h2 className="text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-5">
 //             More About Us
 //           </h2>
 //           <p className="section-des mt-5">
 //             Effortlessly turn your ideas into a fully functional, responsive, SaaS website in just minutes
 //             with this template.
-//           </p>
+//           </p> */}
 //         </div>
 
 //         <div className="relative">
-//           <Image src={} alt="Product image" className="mt-10" />
+//           {/* <Image src={productImage} alt="Product image" className="mt-10" /> */}
+//           <video
+//             src="/src/assets/nyx.mp4"
+//             // alt="Product Video"
+//             className="mt-10 w-full max-w-[600px] mx-auto rounded-lg shadow-lg"
+//             autoPlay
+//             muted
+//             loop
+//           />
 //           <motion.img
 //             src={pyramidImage.src}
 //             alt="Pyramid image"

@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
   });
 
   return (
-    <section id="why-us" className="py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white" ref={ref}>
+    <section id="why-us" className="py-16  bg-gray-50 text-black" ref={ref}>
       <div className="container mx-auto text-center">
         <motion.h2
           className="text-4xl font-extrabold mb-6"

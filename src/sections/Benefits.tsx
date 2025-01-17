@@ -1,66 +1,54 @@
-"use client"
-import React, { useState } from 'react';
+'use client';
+
+import React from 'react';
 import { FaRegClock, FaCheckCircle, FaDollarSign, FaChartLine, FaGlobe, FaPlug } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const benefits = [
   {
-    title: "Save Time and Effort",
+    title: "Integration ecosystem",
     description:
-      "Automate tedious documentation, allowing healthcare providers to focus on patients.",
-    icon: <FaRegClock size={32} />,
-    gradient: "from-[#00CFCF] via-[#007bff] to-[#000000]",
+      "Enhance your productivity by connecting with your favorite tools, keeping all your essentials in one place.",
+    icon: <FaRegClock size={64} className="text-blue-500" />, // Icon size increased
   },
   {
-    title: "Enhance Accuracy",
-    description: "Minimize errors with AI-driven insights and data scrubbing.",
-    icon: <FaCheckCircle size={32} />,
-    gradient: "from-[#00A5A5] via-[#0062CC] to-[#FFFFFF]",
+    title: "Goal setting and tracking",
+    description:
+      "Define and track your goals, breaking down objectives into achievable tasks to keep your targets in sight.",
+    icon: <FaCheckCircle size={64} className="text-blue-500" />, // Icon size increased
   },
   {
-    title: "Reduce Costs",
+    title: "Cost Efficiency",
     description:
-      "Optimize resources through lean workflows and automated processes.",
-    icon: <FaDollarSign size={32} />,
-    gradient: "from-[#00CFCF] via-[#0062CC] to-[#00A5A5]",
+      "Optimize resources with lean workflows and automated processes that lower your operational costs.",
+    icon: <FaDollarSign size={64} className="text-blue-500" />, // Icon size increased
   },
   {
-    title: "Proactive Decision-Making",
+    title: "Predictive Insights",
     description:
-      "Leverage predictive analytics for better clinical and operational decisions.",
-    icon: <FaChartLine size={32} />,
-    gradient: "from-[#007bff] via-[#00A5A5] to-[#000000]",
+      "Leverage predictive analytics to make data-driven decisions and boost operational performance.",
+    icon: <FaChartLine size={64} className="text-blue-500" />, // Icon size increased
   },
   {
-    title: "Inclusive Access",
+    title: "Global Reach",
     description:
-      "Multilingual capabilities cater to a broader patient base and ensure better care delivery.",
-    icon: <FaGlobe size={32} />,
-    gradient: "from-[#00CFCF] via-[#007bff] to-[#0062CC]",
+      "Ensure accessibility with multilingual capabilities that cater to a broader audience and improve user experience.",
+    icon: <FaGlobe size={64} className="text-blue-500" />, // Icon size increased
   },
   {
-    title: "Scalable and Adaptable",
+    title: "Scalable Solutions",
     description:
-      "Modular design ensures it meets the needs of small clinics and large hospital networks alike.",
-    icon: <FaPlug size={32} />,
-    gradient: "from-[#000000] via-[#0062CC] to-[#FFFFFF]",
+      "Flexible and modular designs make it adaptable for small businesses and enterprise-level organizations alike.",
+    icon: <FaPlug size={64} className="text-blue-500" />, // Icon size increased
   },
 ];
 
 const Benefits = () => {
-  const [selectedFeatureIndex, setSelectedFeatureIndex] = useState<number | null>(null);
-
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
-
   return (
-    <section id="benefits" className="py-16 bg-gray-50" ref={ref}>
+    <section id="benefits" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto text-center px-8">
         <motion.h2
-          className="text-5xl font-bold text-gray-800 mb-6"
+          className="text-4xl font-bold text-gray-800 mb-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -71,30 +59,23 @@ const Benefits = () => {
           Experience the power of AI-as-a-Service with benefits that transform
           your healthcare operations.
         </p>
-
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
-              className={`p-8 rounded-lg shadow-md bg-gradient-to-r ${benefit.gradient} transform transition-transform duration-300`}
+              className="h-[320px] p-10 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center justify-center" // Height increased
               initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{
-                scale: 1.05,  // Framer motion hover scale effect
-                boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)",  // Add box-shadow on hover
-              }}
             >
-              <div className="flex justify-center mb-6">
-                <div className="bg-white p-4 rounded-full">{benefit.icon}</div>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
-              <p className="text-lg text-gray-100">{benefit.description}</p>
+              <div className="flex justify-center mb-6">{benefit.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">{benefit.title}</h3>
+              <p className="text-gray-600">{benefit.description}</p>
             </motion.div>
           ))}
         </motion.div>
