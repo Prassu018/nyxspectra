@@ -11,7 +11,6 @@ import Features from"@/sections/Features";
 import Benefits from"@/sections/Benefits";
 import WhyChooseUs from "@/sections/Choose"
 import HowItWorks from "@/sections/HowItWorks"
-// import { hydrateRoot } from 'react-dom/client';
 
 
 export default function Home() {
@@ -20,13 +19,10 @@ export default function Home() {
       <Header />
       <Hero />
       <Intro />
-      {/* <ProductShowcase /> */}
       <Features />
       <Benefits />
       <WhyChooseUs />
       <HowItWorks />
-      {/* <Pricing /> */}
-      {/* <Testimonials /> */}
       <CallToAction />
       <Footer />
     </div>
