@@ -2,7 +2,7 @@ import logo from "@/assets/logosaas.png";
 import SocialX from "@/assets/social-x.svg";
 import SocialInsta from "@/assets/social-insta.svg";
 import SocialLinkedin from "@/assets/social-linkedin.svg";
-import Socialfb from "@/assets/social-facebook.svg";
+// import Socialfb from "@/assets/social-facebook.svg";
 // import SocialYoutube from "@/assets/social-youtube.svg";
 import Image from "next/image";
 
@@ -49,14 +49,7 @@ export const Footer = () => {
           >
             <SocialX className="h-6 w-6 text-white" />
           </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80 transition"
-          >
-            <Socialfb className="h-6 w-6 text-white" />
-          </a>
+        
           <a
             href="https://instagram.com"
             target="_blank"
