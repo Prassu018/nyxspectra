@@ -116,16 +116,16 @@ export const Hero = () => {
         <div className="md:flex items-center">
           <div className="md:w-[478px]">
             
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
             Transforming Healthcare Operations with AI-Powered Automation & Intelligence
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
             Streamline workflows, enhance decision-making, and empower healthcare providers with a cutting-edge AI-as-a-Service platform.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary"> Schedule a Demo Today!</button>
+              {/* <button className="btn btn-primary"> Schedule a Demo Today!</button> */}
               <button className="btn btn-text flex gap-1">
-                <span>Learn more</span>
+                {/* <span>Learn more</span> */}
                 {/* <ArrowIcon classname="h-2 w-2" /> */}
               </button>
             </div>

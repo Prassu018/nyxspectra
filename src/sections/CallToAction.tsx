@@ -32,13 +32,13 @@ export const CallToAction = () => {
             Let us help you focus on what truly matters—your patients.
           </p>
           <div className="flex flex-col md:flex-row gap-4 mt-10 justify-center">
-            <button className="btn btn-primary px-8 py-4 text-lg font-semibold">
+            {/* <button className="btn btn-primary px-8 py-4 text-lg font-semibold">
               Schedule a Demo Today
             </button>
             <button className="btn btn-secondary px-8 py-4 text-lg font-semibold flex items-center gap-2">
               <span>Learn More</span>
               <ArrowRight className="h-5 w-5" />
-            </button>
+            </button> */}
           </div>
         </div>
 

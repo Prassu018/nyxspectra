@@ -15,7 +15,7 @@ const features = [
       "Uses multilingual transcription for inclusivity across diverse regions.",
       "Seamlessly converts voice to text, minimizing manual input.",
     ],
-    image: "/images/ai-documentation.jpg", // Replace with actual image paths
+    image: "/Images/AI-Powered.jpeg", // Replace with actual image paths
   },
   {
     title: "AI-Assisted Diagnostics and Insights",
@@ -23,7 +23,7 @@ const features = [
       "Provides diagnostic suggestions (DDx) to support clinical decisions.",
       "Continuously learns from patient data to improve diagnostic accuracy and reduce bias.",
     ],
-    image: "/images/ai-diagnostics.jpg", // Replace with actual image paths
+    image: "/Images/AI-diagnostic.jpeg", // Replace with actual image paths
   },
   {
     title: "Predictive Analytics for Patient Care",
@@ -31,7 +31,7 @@ const features = [
       "Leverages real-time data to predict patient risks and recommend treatment plans.",
       "Offers proactive alerts for resource allocation and scheduling.",
     ],
-    image: "/images/predictive-analytics.jpg", // Replace with actual image paths
+    image: "/Images/predictive-analytics.jpeg", // Replace with actual image paths
   },
   {
     title: "Auto-Scrubbing and Medical Coding",
@@ -39,7 +39,7 @@ const features = [
       "Automatically cleans and structures clinical notes for compliance and accuracy.",
       "Generates precise ICD codes, simplifying billing and record-keeping.",
     ],
-    image: "/images/medical-coding.jpg", // Replace with actual image paths
+    image: "/Images/Auto-Scrubbing.webp", // Replace with actual image paths
   },
   {
     title: "Seamless Integration",
@@ -47,7 +47,7 @@ const features = [
       "Fully interoperable with existing EHR/HMS systems.",
       "Built on global standards like FHIR and HL7 for easy implementation.",
     ],
-    image: "/images/seamless-integration.jpg", // Replace with actual image paths
+    image: "/Images/integration.webp", // Replace with actual image paths
   },
   {
     title: "End-to-End Encryption and Data Protection",
@@ -55,14 +55,13 @@ const features = [
       "Ensures all patient data is encrypted during storage and transmission.",
       "Adheres to global data privacy standards, including HIPAA, GDPR, and DPDPA compliance.",
     ],
-    image: "/images/data-protection.jpg", // Replace with actual image paths
+    image: "/Images/End-to-End.jpg", // Replace with actual image paths
   },
 ];
 
 const Features = () => {
   const [selectedFeatureIndex, setSelectedFeatureIndex] = useState<number | null>(null);
 
-  // Scroll-in view trigger using useInView correctly
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger only once when the section comes into view
     threshold: 0.3, // Trigger when 30% of the section is in view
@@ -132,11 +131,11 @@ const Features = () => {
                 </motion.li>
               ))}
             </ul>
-            <div className="overflow-hidden rounded-lg">
+            <div className="overflow-hidden rounded-xl">
               <img
                 src={features[selectedFeatureIndex].image}
                 alt={features[selectedFeatureIndex].title}
-                className="w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
+                className="w-full h-64 m-4 object-cover transform hover:scale-105 transition-transform duration-300"
               />
             </div>
           </motion.div>

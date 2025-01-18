@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaMicrophone, FaRobot, FaClipboardCheck, FaCode, FaChartLine } from 'react-icons/fa';  // Importing icons from react-icons
-import { useInView } from 'react-intersection-observer'; // Importing useInView to trigger animations when in view
+import { FaMicrophone, FaRobot, FaClipboardCheck, FaCode, FaChartLine } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
 
 const steps = [
   { 
@@ -34,15 +34,14 @@ const steps = [
 ];
 
 const HowItWorks = () => {
-  // Scroll-in view trigger
   const { ref, inView } = useInView({
-    triggerOnce: true, // Trigger only once when the section comes into view
-    threshold: 0.3, // Trigger when 30% of the section is in view
+    triggerOnce: true,
+    threshold: 0.3,
   });
 
   return (
     <section className="how-it-works py-16 bg-gray-50" ref={ref}>
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center px-4">
         <motion.h2
           className="text-4xl font-extrabold text-gray-800 mb-8"
           initial={{ opacity: 0, y: 50 }}
@@ -52,14 +51,14 @@ const HowItWorks = () => {
           How It Works
         </motion.h2>
         <p className="text-lg text-gray-600 mb-12">The Seamless Process Behind Our SaaS Platform</p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -100 }}
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
               transition={{ delay: index * 0.2, duration: 1 }}
-              className="step-card bg-white p-8 rounded-lg shadow-lg max-w-xs w-full"
+              className="step-card bg-white p-8 rounded-lg shadow-lg flex-1 max-w-xs"
             >
               <div className="icon-container mb-4 flex justify-center items-center h-16 w-16 bg-blue-600 text-white p-4 rounded-full mx-auto">
                 {step.icon}
