@@ -1,7 +1,8 @@
 "use client";
 import ArrowRight from "@/assets/arrow-right.svg";
 import starImage from "@/assets/star.png";
-import springImage from "@/assets/spring.png";
+import mobile from "@/assets/mobile.png"
+// import springImage from "@/assets/spring.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -50,9 +51,9 @@ export const CallToAction = () => {
           style={{ translateY }}
         />
         <motion.img
-          src={springImage.src}
+          src={mobile.src}
           alt="Spring decoration"
-          className="absolute -right-40 top-20 w-[240px] md:w-[360px]"
+          className="absolute -right-7 top-20 w-[240px] md:w-[360px]"
           style={{ translateY }}
         />
       </div>
