@@ -59,12 +59,8 @@ export const Header = () => {
             <a href="#benefits">Benefits</a>
             <a href="#why-us">Why Us?</a>
             <a href="#help">Help</a>
-            <button
-              onClick={() => setIsFormOpen(true)}
-              className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight"
-            >
-              Schedule a Demo Today
-            </button>
+            <a href="mailto:info@nyxspectra.com"><button className="btn btn-primary">Let's Connect</button></a>
+
           </nav>
         </div>
       </div>

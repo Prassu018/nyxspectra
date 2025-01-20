@@ -42,20 +42,13 @@ export const Hero = () => {
               </button>
             </div>
           </div>
-          <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
+
+          <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1  relative">
             <motion.img
               src={mobileh.src}
               alt="Cog"
-              className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
-              animate={{
-                translateY: [-30, 30],
-              }}
-              transition={{
-                repeat: Infinity,
-                repeatType: "mirror",
-                duration: 3,
-                ease: "easeInOut",
-              }}
+              className="md:absolute md:h-[688px] max-md:hidden md:w-auto md:max-w-none sm:left-[-300px] "
+              
             />
             <motion.img
               src={cylinderImage.src}
@@ -78,6 +71,7 @@ export const Hero = () => {
               }}
             />
           </div>
+
         </div>
       </div>
     </section>
