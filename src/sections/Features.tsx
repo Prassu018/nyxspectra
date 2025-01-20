@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Image from 'next/image'; // Import the Image component
 
 // Data for the features
 const features = [
@@ -121,10 +122,12 @@ const Features = () => {
           transition={{ duration: 0.6 }}
         >
           {selectedFeatureIndex === null ? (
-            <img
+            <Image
               src="/Images/defaultimg.jpg"
               alt="Default Feature Illustration"
-              className="w-full h-full object-cover"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-xl"
             />
           ) : (
             <>
@@ -144,10 +147,13 @@ const Features = () => {
                 ))}
               </ul>
               <div className="overflow-hidden rounded-xl mt-6">
-                <img
+                <Image
                   src={features[selectedFeatureIndex].image}
                   alt={features[selectedFeatureIndex].title}
-                  className="w-full h-full object-cover"
+                  layout="responsive"
+                  width={800}
+                  height={450}
+                  className="rounded-xl"
                 />
               </div>
             </>

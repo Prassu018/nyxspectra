@@ -59,7 +59,8 @@ export const Header = () => {
             <a href="#benefits">Benefits</a>
             <a href="#why-us">Why Us?</a>
             <a href="#help">Help</a>
-            <a href="mailto:info@nyxspectra.com"><button className="btn btn-primary">Let's Connect</button></a>
+            <a href="mailto:info@nyxspectra.com"><button className="btn btn-primary">Let&apos;s Connect</button></a>
+
 
           </nav>
         </div>
