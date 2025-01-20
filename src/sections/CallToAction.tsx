@@ -35,7 +35,7 @@ export const CallToAction = () => {
 
     try {
       const response = await fetch(
-        "https://v1.nocodeapi.com/prassu18/google_sheets/iNEgSWNIOELypPAG?tabId=Sheet1",
+        "https://v1.nocodeapi.com/nyxspectra/google_sheets/zgDjvjnCVdreEprt?tabId=Sheet1",
         {
           method: "POST",
           body: JSON.stringify([[formData.name, formData.email, formData.phone, formData.message]]),
