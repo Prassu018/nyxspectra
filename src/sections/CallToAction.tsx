@@ -41,7 +41,7 @@ export const CallToAction = () => {
           body: JSON.stringify([[formData.name, formData.email, formData.phone, formData.message]]),
           headers: { "Content-Type": "application/json" },
         }
-      );
+      ); 
 
       if (response.ok) {
         toast.success("Form submitted successfully!");

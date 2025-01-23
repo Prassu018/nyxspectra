@@ -46,7 +46,14 @@ export const Header = () => {
     <header className="sticky top-0 backdrop-blur-sm z-20">
       <div className="py-5">
         <div className="container flex items-center justify-between">
-          <Image src={Logo} alt="Saas logo" height={40} width={40} />
+          <Image 
+                src={Logo} 
+                alt="Saas logo" 
+                height={40} 
+                width={40} 
+                style={{ width: 'auto', height: 'auto' }} 
+/>
+          {/* <Image src={Logo} alt="Saas logo" height={40} width={40} /> */}
           <div className="md:hidden">
             <MenuIcon
               className="h-6 w-6 cursor-pointer"
