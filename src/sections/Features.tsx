@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Image from 'next/image'; // Import the Image component
-
+import Powered from "../assets/AI-Powered.jpeg"
+import Diagnostic from "../assets/AI-diagnostic.jpeg"
+import Predictive from "../assets/predictive-analytics.jpeg"
+import Scrubbing from "../assets/Auto-Scrubbing.webp"
+import Integration from "../assets/integration.webp"
+import End from "../assets/End-to-End.jpg"
 // Data for the features
 const features = [
   {
@@ -13,7 +18,7 @@ const features = [
       "Uses multilingual transcription for inclusivity across diverse regions.",
       "Seamlessly converts voice to text, minimizing manual input.",
     ],
-    image: "/Images/AI-Powered.jpeg",
+    image: Powered,
   },
   {
     title: "AI-Assisted Diagnostics and Insights",
@@ -21,7 +26,7 @@ const features = [
       "Provides diagnostic suggestions (DDx) to support clinical decisions.",
       "Continuously learns from patient data to improve diagnostic accuracy and reduce bias.",
     ],
-    image: "/Images/AI-diagnostic.jpeg",
+    image: Diagnostic ,
   },
   {
     title: "Predictive Analytics for Patient Care",
@@ -29,7 +34,7 @@ const features = [
       "Leverages real-time data to predict patient risks and recommend treatment plans.",
       "Offers proactive alerts for resource allocation and scheduling.",
     ],
-    image: "/Images/predictive-analytics.jpeg",
+    image:Predictive ,
   },
   {
     title: "Auto-Scrubbing and Medical Coding",
@@ -37,7 +42,7 @@ const features = [
       "Automatically cleans and structures clinical notes for compliance and accuracy.",
       "Generates precise ICD codes, simplifying billing and record-keeping.",
     ],
-    image: "/Images/Auto-Scrubbing.webp",
+    image: Scrubbing,
   },
   {
     title: "Seamless Integration",
@@ -45,7 +50,7 @@ const features = [
       "Fully interoperable with existing EHR/HMS systems.",
       "Built on global standards like FHIR and HL7 for easy implementation.",
     ],
-    image: "/Images/integration.webp",
+    image: Integration,
   },
   {
     title: "End-to-End Encryption and Data Protection",
@@ -53,7 +58,7 @@ const features = [
       "Ensures all patient data is encrypted during storage and transmission.",
       "Adheres to global data privacy standards, including HIPAA, GDPR, and DPDPA compliance.",
     ],
-    image: "/Images/End-to-End.jpg",
+    image: End ,
   },
 ];
 
