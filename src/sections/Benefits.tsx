@@ -1,6 +1,5 @@
-'use client';
-
-import React from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import { FaRegClock, FaCheckCircle, FaDollarSign, FaChartLine, FaGlobe, FaPlug } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
@@ -44,6 +43,16 @@ const benefits = [
 ];
 
 const Benefits = () => {
+  const [hasMounted, setHasMounted] = useState(false);  // State to track if the component has mounted
+
+  useEffect(() => {
+    setHasMounted(true);  // Set to true once the component is mounted
+  }, []);
+
+  if (!hasMounted) {
+    return null;  // Return nothing until the component is mounted to avoid hydration mismatch
+  }
+
   return (
     <section id="benefits" className="py-16 bg-gray-50">
       <motion.div

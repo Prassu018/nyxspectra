@@ -15,9 +15,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isClient = typeof window !== "undefined";
+
   return (
-    <html lang="en" className="relative">
-      <body className={twMerge(dmSans.className, "antialiased bg-[#EAEEFE]")}>{children}</body>
+    <html lang="en" className={twMerge("relative", isClient ? "hydrated" : "")}>
+      <body className={twMerge(dmSans.className, "bg-[#EAEEFE]")}>
+        {children}
+      </body>
     </html>
   );
 }

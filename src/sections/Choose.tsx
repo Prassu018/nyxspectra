@@ -1,48 +1,30 @@
-'use client';
-
-import React from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import { FaIndustry, FaRobot, FaLanguage, FaShieldAlt, FaGlobeAmericas, FaStethoscope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const WhyChooseUs = () => {
+  const [hasMounted, setHasMounted] = useState(false);  // State to track if the component has mounted
+
+  useEffect(() => {
+    setHasMounted(true);  // Set to true once the component is mounted
+  }, []);
+
   const features = [
-    {
-      title: 'Built on Lean Manufacturing Principles',
-      description: 'Designed to eliminate waste and improve efficiency.',
-      icon: <FaIndustry className="text-4xl text-primary" />,
-    },
-    {
-      title: 'AI-Powered Intelligence',
-      description: 'Proactive insights, predictive analytics, and clinical decision support.',
-      icon: <FaRobot className="text-4xl text-primary" />,
-    },
-    {
-      title: 'Real-Time Multilingual Transcription',
-      description: 'Bridging communication gaps across languages.',
-      icon: <FaLanguage className="text-4xl text-primary" />,
-    },
-    {
-      title: 'Auto-Scrubbing for Compliance',
-      description: 'Ensures clean, accurate data for seamless operations.',
-      icon: <FaShieldAlt className="text-4xl text-primary" />,
-    },
-    {
-      title: 'Global Standards',
-      description: 'FHIR/HL7-compliant for easy integration with existing systems.',
-      icon: <FaGlobeAmericas className="text-4xl text-primary" />,
-    },
-    {
-      title: 'Specialty-Specific Modules',
-      description: 'Tailored solutions for various medical fields, from oncology to radiology.',
-      icon: <FaStethoscope className="text-4xl text-primary" />,
-    },
+    { title: 'Built on Lean Manufacturing Principles', description: 'Designed to eliminate waste and improve efficiency.', icon: <FaIndustry className="text-4xl text-primary" /> },
+    { title: 'AI-Powered Intelligence', description: 'Proactive insights, predictive analytics, and clinical decision support.', icon: <FaRobot className="text-4xl text-primary" /> },
+    { title: 'Real-Time Multilingual Transcription', description: 'Bridging communication gaps across languages.', icon: <FaLanguage className="text-4xl text-primary" /> },
+    { title: 'Auto-Scrubbing for Compliance', description: 'Ensures clean, accurate data for seamless operations.', icon: <FaShieldAlt className="text-4xl text-primary" /> },
+    { title: 'Global Standards', description: 'FHIR/HL7-compliant for easy integration with existing systems.', icon: <FaGlobeAmericas className="text-4xl text-primary" /> },
+    { title: 'Specialty-Specific Modules', description: 'Tailored solutions for various medical fields, from oncology to radiology.', icon: <FaStethoscope className="text-4xl text-primary" /> },
   ];
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  if (!hasMounted) {
+    return null;  // Return nothing until the component is mounted to avoid hydration mismatch
+  }
 
   return (
     <section id="why-us" className="py-16 bg-gray-50 text-black" ref={ref}>

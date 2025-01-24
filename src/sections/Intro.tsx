@@ -1,23 +1,32 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image'; // Using next/image for better handling of images
+import { motion, useScroll, useTransform } from 'framer-motion';
 import pyramidImage from "@/assets/pyramid.png";
 import tubeImage from "@/assets/tube.png";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 
 export const Intro = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"],
+    offset: ['start end', 'end start'],
   });
 
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Ensures scroll-related logic is only executed on the client
+  }, []);
+
+  if (!isClient) return null; // Prevent hydration mismatch during SSR
+
   return (
     <section
       ref={sectionRef}
-      className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip"
+      className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-hidden"
     >
       <div className="container">
         {/* Intro Section */}
@@ -26,7 +35,7 @@ export const Intro = () => {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, ease: 'easeOut' }}
         >
           <h2 className="text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-[#00CFCF] to-[#007bff] text-transparent bg-clip-text mt-5">
             More About Us
@@ -55,26 +64,34 @@ export const Intro = () => {
             loop
             controls
           />
-          <motion.img
-            src={pyramidImage.src}
-            alt="Pyramid image"
-            height={262}
-            width={262}
+          {/* Motion for pyramid image */}
+          <motion.div
             className="hidden md:block absolute -right-36 -top-32"
             style={{
-              translateY: translateY,
+              translateY, // You can directly use translateY for the animation
             }}
-          />
-          <motion.img
-            src={tubeImage.src}
-            alt="Tube image"
-            height={248}
-            width={248}
+          >
+            <Image
+              src={pyramidImage}
+              alt="Pyramid image"
+              height={262}
+              width={262}
+            />
+          </motion.div>
+          {/* Motion for tube image */}
+          <motion.div
             className="hidden md:block absolute bottom-24 -left-36"
             style={{
-              translateY: translateY,
+              translateY, // Apply translateY here
             }}
-          />
+          >
+            <Image
+              src={tubeImage}
+              alt="Tube image"
+              height={248}
+              width={248}
+            />
+          </motion.div>
         </div>
       </div>
     </section>
