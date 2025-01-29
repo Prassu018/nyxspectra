@@ -12,7 +12,7 @@ Welcome to the Stunning SaaS Landing Page project! This project is built with Re
 - [Preview](#preview)
 
 ## Demo
-Check out the live demo of the project [here](https://saas-landing-nextjs.vercel.app/).
+Check out the live demo of the project [here](https://nyxspectra.com/).
 
 ## Features
 - Responsive design
