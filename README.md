@@ -9,10 +9,10 @@ Welcome to the Stunning SaaS Landing Page project! This project is built with Re
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Preview](#preview)
+
 
 ## Demo
-Check out the live demo of the project [here](https://saas-landing-nextjs.vercel.app/).
+Check out the live project [here](https://nyxspectra.com/).
 
 ## Features
 - Responsive design
@@ -31,7 +31,7 @@ Check out the live demo of the project [here](https://saas-landing-nextjs.vercel
 To get started with this project, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/harshxraj/saas-landing-nextjs.git
+git clone https://github.com/Prassu018/nyxspectra.git
 cd saas-landing-nextjs
 npm install
 ```
@@ -45,7 +45,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the project.
 
-## Preview
-![image](https://github.com/user-attachments/assets/85e0357d-65a3-45a5-94fb-ead789a718e2)
+
 
 
